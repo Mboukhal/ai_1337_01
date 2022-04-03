@@ -2,8 +2,7 @@
 
 import sys
 
-if __name__ == "__main__" :
-    
+if __name__ == "__main__":
     try:
         assert len(sys.argv) >= 2
     except AssertionError:
@@ -27,4 +26,3 @@ if __name__ == "__main__" :
         print("I’m Even.")
     else:
         print("I’m Odd.")
-

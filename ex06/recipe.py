@@ -1,26 +1,28 @@
 #! /usr/bin/env python
 
 cookbook = {
-    "Sandwich's" : {
-        "ingredients" : ["ham", "bread", "cheese", "tomatoes"],
-        "meal" : "lunch",
-        "prep_time" : 10
+    "Sandwich's": {
+        "ingredients": ["ham", "bread", "cheese", "tomatoes"],
+        "meal": "lunch",
+        "prep_time": 10
      },
-    "Cake's" : {
-        "ingredients" : ["flour", "sugar", "eggs"],
-        "meal" : "dessert",
-        "prep_time" : 60
+    "Cake's": {
+        "ingredients": ["flour", "sugar", "eggs"],
+        "meal": "dessert",
+        "prep_time": 60
     },
-    "Salad's" : {
-        "ingredients" : ["avocado", "arugula", "tomatoes", "spinach"],
-        "meal" : "lunch",
-        "prep_time" : 15
+    "Salad's": {
+        "ingredients": ["avocado", "arugula", "tomatoes", "spinach"],
+        "meal": "lunch",
+        "prep_time": 15
     }
 }
 
+
 def get_recipe(book):
-    for key in book.items() :
+    for key in book.items():
         print(f"{key[0]}")
+
 
 def get_recipe_details(recipe):
     print(f"Recipe for {recipe}:")
@@ -31,32 +33,34 @@ def get_recipe_details(recipe):
     print(f"\tTo be eaten for {meal}")
     print(f"\tTakes {time} minutes of cooking.")
 
+
 def del_recipe(recipe):
     cookbook.pop(recipe, None)
+
 
 def add_recipe():
     print("Enter a name:")
     name = input()
-
     print("Enter ingredients:")
     ingredients = []
-
     for i in range(0, 3):
         item = input()
         ingredients.append(item)
-
     print("Enter a meal type:")
     meal = input()
-    
     print("Enter a preparation time:")
     prep_time = int(input())
-
-    new_recipe = {name : {"ingredients":ingredients ,"meal":meal,"prep_time":prep_time}}
+    new_recipe = {
+        name: {
+            "ingredients": ingredients,
+            "meal": meal,
+            "prep_time": prep_time
+        }
+            }
     cookbook.update(new_recipe)
 
 
 if __name__ == "__main__":
-
     print("Welcome to the Python Cookbook !")
     while True:
         print("""List of available option:
@@ -82,7 +86,6 @@ if __name__ == "__main__":
                 print()
             else:
                 print("Sorry, this option does not exist.")
-
         if cmd == '4':
             print()
             get_recipe(cookbook)
@@ -90,4 +93,3 @@ if __name__ == "__main__":
         if cmd == '5':
             print("\nCookbook closed. Goodbye !")
             exit()
-        

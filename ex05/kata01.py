@@ -5,8 +5,8 @@ languages = {
     'Ruby': 'Yukihiro Matsumoto',
     'PHP': 'Rasmus Lerdorf',
     }
-    
-if __name__ == '__main__':
 
+
+if __name__ == '__main__':
     for key, val in languages.items():
         print(f"{key} was created by {val}")

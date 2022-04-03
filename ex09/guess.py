@@ -3,22 +3,19 @@
 from random import randint
 
 if __name__ == '__main__':
-
     print("This is an interactive guessing game!\
-        \nYou have to enter a number between 1 and 99 to find out the secret number.\
+        \nYou have to enter a number between 1 and 99 to ", end='')
+    print("find out the secret number.\
         \nType 'exit' to end the game.\
         \nGood luck!\n")
     number = randint(1, 99)
     user = 0
     exit_user = ''
     i = 0
-
     while True:
-
         print('What\'s your guess between 1 and 99?')
         user = input('>> ')
         i += 1
-
         if user == 'exit':
             print('Goodbye!')
             exit(0)
@@ -29,7 +26,8 @@ if __name__ == '__main__':
         elif int(user) > number:
             print('Too high!')
         elif int(user) == number and i == 1:
-            print("The answer to the ultimate question of life, the universe and everything is 42.\
+            print("The answer to the ultimate question ", end='')
+            print("of life, the universe and everything is 42.\
                 \nCongratulations! You got it on your first try!")
             exit(0)
         elif int(user) == number:

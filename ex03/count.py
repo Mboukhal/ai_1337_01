@@ -2,6 +2,7 @@
 
 import string
 
+
 def text_analyzer(*text):
     """This function counts the number of upper characters, lower characters,
     \npunctuation and spaces in a given text."""
