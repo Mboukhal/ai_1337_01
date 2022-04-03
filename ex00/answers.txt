@@ -1,4 +1,4 @@
-pip list | awk {'print $1'}
+pip list --format freeze | sed 's/==.*//'
 pip list
 pip show numpy
 pip install tesseract 
